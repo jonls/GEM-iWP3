@@ -1,0 +1,15 @@
+sudo: false
+language: python
+cache:
+  directories:
+    - $HOME/.cache/pip
+addons:
+  apt:
+    packages:
+      - glpk
+      - swig
+
+install:
+  - pip install psamm==0.28 swiglpk
+
+script: ./test.py
